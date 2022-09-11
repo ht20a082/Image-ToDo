@@ -14,7 +14,16 @@
 </head>
 
 <body>
-  {% block content %}{% endblock content %}
+  <nav class="navbar navbar-dark bg-primary sticky-top">
+    <div class="navbar-nav d-flex flex-row">
+      <a class="nav-link mx-3" href="{% url 'list-todo' %}">ToDoリスト</a>
+      <a class="nav-link mx-3" href="{% url 'create-todo' %}">ToDo登録</a>
+    </div>
+  </nav>
+  <div class="'p-4">
+    <h1>{% block h1 %}{% endblock %}</h1>
+    {% block content %}{% endblock content %}
+  </div>
 </body>
 
 </html>

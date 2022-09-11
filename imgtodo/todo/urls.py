@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
   path('todo/', views.ListTodoView.as_view(), name='list-todo'),
   path('todo/create/', views.CreateTodoView.as_view(), name='create-todo'),
+  path('todo/<int:pk>/detail/', views.DetailTodoView.as_view(), name='detail-todo'),
 ]

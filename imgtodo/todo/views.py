@@ -10,7 +10,7 @@ class ListTodoView(ListView):
 class CreateTodoView(CreateView):
   template_name = 'todo/todo_create.html'
   model = Todo
-  fields = ('title', 'body', 'category')
+  fields = ('title', 'body', 'priority', 'category')
   success_url = reverse_lazy('list-todo')
 
 class DetailTodoView(DetailView):

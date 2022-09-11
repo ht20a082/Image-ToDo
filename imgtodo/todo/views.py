@@ -18,7 +18,7 @@ class DetailTodoView(DetailView):
   model = Todo
 
 class DeleteTodoView(DeleteView):
-  template_name = 'todo/todo_detail.html'
+  template_name = 'todo/todo_delete.html'
   model = Todo
   success_url = reverse_lazy('list-todo')
 

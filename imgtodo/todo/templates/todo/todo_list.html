@@ -5,12 +5,15 @@
 {% block content %}
 
 {% for item in object_list %}
-<ul>
-  <li>{{ item.title }}</li>
-  <li>{{ item.body }}</li>
-  <li>{{ item.category }}</li>
-  <li>{{ item.priority }}</li>
-</ul>
+<div class="card">
+  <h5 class="card-headder">{{ item.title }}</h5>
+  <div class="card-header">
+    <p class="card-text">{{ item.body }}</p>
+    <a href="{% url 'detail-todo' item.pk %}" class="btn btn-primary">詳細へ</a>
+    <h6 class="card-title">{{ item.category }}</h6>
+    <h6 class="card-title">{{ item.priority }}</h6>
+  </div>
+</div>
 {% endfor %}
 
 {% endblock content %}

@@ -3,36 +3,42 @@
 {% block title %}ToDo作成{% endblock %}
 
 {% block content %}
-<form method="POST" class="p-4 m-4 bg-light border border-success rounded form-group">
-  {% csrf_token %}
-  <!-- タイトル
-  </label>
-  <input class="form-control" name="title">
-  <label>
-    内容
-  </label>
-  <textarea class="form-control" name="text" rows="3"></textarea>
-  <label>
-    優先度
-  </label>
-  <select class="form-control" name="rate">
-    <option value="0">0 (最低)</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3" selected>3 (普通)</option>
-    <option value="4">4</option>
-    <option value="5">5 (最高)</option>
-  </select>
-  <label>
-    カテゴリ
-  </label>
-  <select class="form-control" name="rate">
-    <option value="school">学校</option>
-    <option value="work">仕事</option>
-    <option value="hoby">趣味</option>
-    <option value="private" selected>プライベート</option>
-  </select> -->
-  {{ form.as_p }}
-  <button type="submit" class="btn btn-success mt-4">投稿する</button>
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <form method="POST" class="p-4 m-4 bg-light border border-success rounded form-group">
+        {% csrf_token %}
+        <!-- タイトル
+        </label>
+        <input class="form-control" name="title">
+        <label>
+          内容
+        </label>
+        <textarea class="form-control" name="text" rows="3"></textarea>
+        <label>
+          優先度
+        </label>
+        <select class="form-control" name="rate">
+          <option value="0">0 (最低)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3 (普通)</option>
+          <option value="4">4</option>
+          <option value="5">5 (最高)</option>
+        </select>
+        <label>
+          カテゴリ
+        </label>
+        <select class="form-control" name="rate">
+          <option value="school">学校</option>
+          <option value="work">仕事</option>
+          <option value="hoby">趣味</option>
+          <option value="private" selected>プライベート</option>
+        </select> -->
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success mt-4">投稿する</button>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock content %}

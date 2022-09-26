@@ -3,15 +3,21 @@
 {% block title %}ToDo完了{% endblock %}
 
 {% block content %}
-<div class="card">
-  <h5 class="card-header">{{ object.title }}</h5>
-  <div class="card-body">
-    <p class="card-text">{{ object.text }}</p>
-    <a href="{% url 'list-todo' %}" class="btn btn-primary">一覧へ</a>
-    <a href="{% url 'update-todo' object.pk %}" class="btn btn-primary">編集する</a>
-    <a href="{% url 'delete-todo' object.pk %}" class="btn btn-primary">完了</a>
-    <h6 class="card-title">{{ object.category }}</h6>
-    <h6 class="card-title">{{ object.priority }}</h6>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <div class="card">
+        <h5 class="card-header">{{ object.title }}</h5>
+        <div class="card-body">
+          <p class="card-text">{{ object.text }}</p>
+          <a href="{% url 'list-todo' %}" class="btn btn-primary">一覧へ</a>
+          <a href="{% url 'update-todo' object.pk %}" class="btn btn-primary">編集する</a>
+          <a href="{% url 'delete-todo' object.pk %}" class="btn btn-primary">完了</a>
+          <h6 class="card-title">{{ object.category }}</h6>
+          <h6 class="card-title">{{ object.priority }}</h6>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
